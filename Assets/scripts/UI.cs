@@ -9,7 +9,7 @@ public class UI : MonoBehaviour
     public bool st = false;
     float timer = 0;
 
-
+    public static UI inst;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +31,6 @@ public class UI : MonoBehaviour
     public void StartBTN()
     {
         st = true;
-        Player.inst.speed = Player.inst.speedRun ;
+        Player.inst.speed = Player.inst.speedRun;
     }
 }

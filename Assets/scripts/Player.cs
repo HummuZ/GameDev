@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public float speed = 0;
+    public float speed = 0.01f;
     public float Distance = 0.1f;
     public float speedRun = 0.01f;
 
