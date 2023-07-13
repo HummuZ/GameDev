@@ -5,8 +5,9 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public float speed = 0.01f;
+    public float speed = 0;
     public float Distance = 0.1f;
+    public float speedRun = 0.01f;
 
 
     public static Player inst;
@@ -17,6 +18,7 @@ public class Player : MonoBehaviour
         if(inst == null){
             inst=this;
         }
+        speed = 0;
     }
 
     // Update is called once per frame
