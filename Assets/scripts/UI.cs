@@ -8,12 +8,12 @@ public class UI : MonoBehaviour
     public TMP_Text TimerText;
     public bool st = false;
     float timer = 0;
-
+    public GameObject Coin;
     public static UI inst;
     // Start is called before the first frame update
     void Start()
     {
-        
+        InvokeRepeating("CoinCreate", 2, 3);
     }
 
     // Update is called once per frame
@@ -32,5 +32,13 @@ public class UI : MonoBehaviour
     {
         st = true;
         Player.inst.speed = Player.inst.speedRun;
+    }
+    public void CoinCreate()
+    {
+        if (st)
+        {
+            GameObject c = Instantiate(Coin) as GameObject;
+            c.transform.position = new Vector3(Random.Range(-3.3f, 3.8f), 0.5f, Random.Range(-3.1f, 3.4f));
+        }
     }
 }

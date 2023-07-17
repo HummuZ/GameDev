@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     public float Distance = 0.1f;
     public float speedRun = 0.01f;
 
-
+    public AudioSource aud;
     public static Player inst;
     public int Score = 0;
     // Start is called before the first frame update
@@ -58,7 +58,7 @@ public class Player : MonoBehaviour
         if (collision.gameObject.tag == "Coin")
         {
             Score++;
-          
+            aud.Play();
             Destroy(collision.gameObject);
             
       
