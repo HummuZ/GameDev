@@ -18,20 +18,10 @@ public class SnowMan : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        if (Input.GetKey(KeyCode.UpArrow))
-        {
-            //transform.position += transform.forward * speed * Time.deltaTime;
-            transform.position += new Vector3(0, 0, speed);
-
-        }
-
-        if (Input.GetKey(KeyCode.DownArrow))
-        {
-            //transform.position += transform.forward * speed * Time.deltaTime;
-            transform.position += new Vector3(0, 0, -speed);
-
-        }
+        // static forward
+        //transform.position += new Vector3(0, 0, speed);
+       
+       
 
         if (Input.GetKey(KeyCode.RightArrow))
         {
@@ -50,32 +40,18 @@ public class SnowMan : MonoBehaviour
         if (Input.GetKey(KeyCode.UpArrow))
         {
             //transform.position += transform.forward * speed * Time.deltaTime;
-            transform.position += new Vector3(0, 0, speed);
+            transform.position += new Vector3(0, speed, 0);
 
         }
 
         if (Input.GetKey(KeyCode.DownArrow))
         {
             //transform.position += transform.forward * speed * Time.deltaTime;
-            transform.position += new Vector3(0, 0, -speed);
+            transform.position += new Vector3(0,-speed,0);
 
         }
 
-        if (Input.GetKey(KeyCode.A))
-        {
-            //transform.position += transform.forward * speed * Time.deltaTime;
-            transform.rotation *= Quaternion.Euler(0, 2, 2);
-
-           
-
-        }
-
-        if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            //transform.position += transform.forward * speed * Time.deltaTime;
-            transform.position += new Vector3(-speed, 0, 0);
-
-        }
+       
     }
     
 }
