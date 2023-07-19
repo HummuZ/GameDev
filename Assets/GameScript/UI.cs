@@ -10,7 +10,7 @@ public class UI : MonoBehaviour
     float timer = 0;
     public GameObject start_button;
     public GameObject reset_button;
-    Vector3 start_button_pos
+    Vector3 start_button_pos;
     Vector3 start_button_scale;
     Vector3 reset_button_scale;
     public static UI inst;
